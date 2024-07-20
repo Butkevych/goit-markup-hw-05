@@ -69,6 +69,50 @@
           <button type="button" class="headline-button">Order Service</button>
         </div>
       </section>
+      <div class="modal-overlay">
+        <div class="modal">
+          <button></button>
+          <p>Leave your contacts and we will call you back</p>
+          <form>
+            <div>
+              <label for="name"
+                >Name
+                <div><input type="text" name="name" /></div
+              ></label>
+            </div>
+            <div>
+              <label for="phone"
+                >Phone
+                <div><input type="tel" name="phone" /></div
+              ></label>
+            </div>
+            <div>
+              <label for="email"
+                >Email
+                <div><input type="email" name="email" /></div>
+              </label>
+            </div>
+            <div>
+              <label for="comment">
+                Comment
+                <div>
+                  <textarea
+                    name="comment"
+                    row="5"
+                    placeholder="Text input"
+                  ></textarea>
+                </div>
+              </label>
+            </div>
+            <input type="checkbox" name="private-policy-acceptance" /><label
+              for="private-policy-acceptance"
+              >I accept the terms and conditions of the
+              <a href="">Private Policy</a></label
+            >
+            <button type="submit" class="headline-button">Send</button>
+          </form>
+        </div>
+      </div>
 
       <!-- Main features' section -->
       <section class="features-section section">
@@ -489,6 +533,22 @@
             </li>
           </ul>
         </div>
+        <form>
+          <label>
+            Subscribe
+            <input
+              type="email"
+              name="email"
+              class="email-form"
+              placeholder="Email"
+            />
+          </label>
+          <button type="submit" class="subscribe-button">
+            Subscibe<svg class="footer-subscribe-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
   </body>
