@@ -71,43 +71,63 @@
       </section>
       <div class="modal-overlay">
         <div class="modal">
-          <button></button>
-          <p>Leave your contacts and we will call you back</p>
+          <button type="submit" class="closing-button">
+            <svg width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <p class="modal-text">
+            Leave your contacts and we will call you back
+          </p>
           <form>
             <div>
-              <label for="name"
-                >Name
-                <div><input type="text" name="name" /></div
-              ></label>
+              <label for="name" class="form-label">Name</label>
+              <div class="form-mod-input">
+                <input type="text" name="name" class="form-input" checked />
+                <svg class="form-svg" width="12" height="12">
+                  <use href="./images/icons.svg#icon-man"></use>
+                </svg>
+              </div>
             </div>
             <div>
-              <label for="phone"
-                >Phone
-                <div><input type="tel" name="phone" /></div
-              ></label>
+              <label for="phone" class="form-label">Phone</label>
+              <div class="form-mod-input">
+                <input type="tel" name="phone" class="form-input" /><svg
+                  class="form-svg"
+                  width="13"
+                  height="13"
+                >
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
             </div>
             <div>
-              <label for="email"
-                >Email
-                <div><input type="email" name="email" /></div>
-              </label>
+              <label for="email" class="form-label">Email </label>
+              <div class="form-mod-input">
+                <input type="email" name="email" class="form-input" /><svg
+                  class="form-svg"
+                  width="16"
+                  height="12"
+                >
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+              </div>
             </div>
-            <div>
-              <label for="comment">
-                Comment
-                <div>
-                  <textarea
-                    name="comment"
-                    row="5"
-                    placeholder="Text input"
-                  ></textarea>
-                </div>
-              </label>
+            <div class="form-mod-input">
+              <label for="comment" class="form-label"> Comment </label>
+              <div>
+                <textarea
+                  name="comment"
+                  row="5"
+                  placeholder="Text input"
+                ></textarea>
+              </div>
             </div>
             <input type="checkbox" name="private-policy-acceptance" /><label
               for="private-policy-acceptance"
+              class="form-label-check"
               >I accept the terms and conditions of the
-              <a href="">Private Policy</a></label
+              <a class="private-policy-link" href="">Private Policy</a></label
             >
             <button type="submit" class="headline-button">Send</button>
           </form>
