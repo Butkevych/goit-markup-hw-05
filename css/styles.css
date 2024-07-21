@@ -270,7 +270,7 @@ header {
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding-top: 8px;
+  margin-top: 8px;
 }
 .team-social-media {
   width: 40px;
@@ -293,7 +293,6 @@ header {
 .team-s-m-icons {
   fill: #f4f4fd;
 }
-
 .portfolio-info {
   padding: 32px 16px;
   border-top: 0px;
