@@ -392,20 +392,24 @@ header {
 .subscribe-form-container {
   margin-left: 80px;
 }
+.subscribe-form-container p {
+  margin-bottom: 16px;
+}
 .subscribe-form {
   display: flex;
   align-items: center;
-  margin-top: 16px;
   gap: 24px;
 }
-
 .email-form {
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background-color: #2e2f42;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   padding: 8px 0 8px 16px;
   color: #fff;
 }
@@ -419,7 +423,11 @@ header {
 .subscribe-button {
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
@@ -494,6 +502,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 .closing-button:hover,
 .closing-button:focus {
@@ -519,6 +528,8 @@ header {
 }
 .form-mod-input {
   position: relative;
+}
+.form-mod-textarea {
   margin-bottom: 16px;
 }
 .form-mod-input:not(:last-child) {
@@ -555,6 +566,7 @@ header {
   color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  resize: none;
 }
 .form-label {
   font-weight: 400;
