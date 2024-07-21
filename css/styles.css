@@ -389,13 +389,14 @@ header {
 .s-m-footer-link:focus {
   background-color: #31d0aa;
 }
-.subscribe-form {
+.subscribe-form-container {
   margin-left: 80px;
 }
-.subscribe-container {
+.subscribe-form {
   display: flex;
   align-items: center;
   margin-top: 16px;
+  gap: 24px;
 }
 
 .email-form {
@@ -428,14 +429,13 @@ header {
   color: #fff;
   cursor: pointer;
   border: none;
-  margin-left: 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-subscribe-icon {
   margin-left: 16px;
 }
 .modal-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
 
   position: fixed;
   top: 0;
@@ -481,7 +481,7 @@ header {
 }
 .closing-button {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #e7e9fc;
   position: absolute;
   top: 24px;
@@ -489,12 +489,20 @@ header {
   width: 24px;
   height: 24px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.closing-button:hover {
+.closing-button:hover,
+.closing-button:focus {
   background-color: #404bbf;
   fill: #fff;
   border: none;
+}
+.closing-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-text {
   font-weight: 500;
@@ -511,15 +519,17 @@ header {
 }
 .form-mod-input {
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .form-mod-input:not(:last-child) {
   margin-bottom: 8px;
 }
 .form-svg {
   position: absolute;
-  top: 11px;
+  top: 50%;
   left: 16px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -527,6 +537,9 @@ header {
   width: 100%;
   height: 40px;
   padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textarea-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -534,8 +547,14 @@ header {
   width: 100%;
   height: 120px;
   margin-bottom: 16px;
-  padding-top: 8px;
-  padding-left: 16px;
+  padding: 8px 16px;
+  outline: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-label {
   font-weight: 400;
@@ -544,6 +563,8 @@ header {
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
+  line-height: 1.17;
+  display: block;
 }
 /* .form-label-check {
   margin-left: 8px;
@@ -551,7 +572,7 @@ header {
 .mod-button {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
@@ -564,7 +585,6 @@ header {
   color: #fff;
   display: block;
   margin: 0 auto;
-  margin-top: 24px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -584,7 +604,8 @@ header {
 .form-mod-input input:focus + svg {
   fill: #4d5ae5;
 }
-.form-mod-input input:focus {
+.form-mod-input input:focus,
+.textarea-input:focus {
   border: 1px solid #4d5ae5;
 }
 .form-label-check span {
@@ -600,9 +621,18 @@ header {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 .form-input-check:checked + label > span {
   background-color: #4d5ae5;
   border: none;
   fill: #f4f4fd;
+}
+.form-container {
+  margin-bottom: 8px;
+}
+.checkbox-container {
+  margin-bottom: 24px;
 }
